@@ -4,42 +4,53 @@
 
 @layer base {
   body {
-    @apply bg-[#050507] text-[#f4f4f5] overflow-x-hidden;
+    @apply bg-[#0a0b10] text-[#f8fafc] overflow-x-hidden selection:bg-amber-500 selection:text-black;
   }
 }
 
-/* Custom glassmorphism and Apple-style scrollbar */
+/* Custom Artisan scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #050507;
+  background: #0a0b10;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 3px;
+  background: #232538;
+  border-radius: 4px;
+  border: 2px solid #0a0b10;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #3b3f5c;
 }
 
 .glass-panel {
-  @apply bg-[#0d0d10]/90 backdrop-blur-xl border border-[#1f1f23] rounded-2xl shadow-2xl;
+  @apply bg-[#13141f]/90 backdrop-blur-xl border border-[#232538] rounded-2xl shadow-2xl transition-all duration-300;
 }
 
 .glass-panel-hover {
-  @apply transition-all duration-300 hover:border-white/20 hover:bg-[#17171b]/90 hover:shadow-white/5;
+  @apply hover:border-amber-500/30 hover:bg-[#1a1c2e]/90 hover:shadow-lg hover:shadow-amber-500/5 hover:-translate-y-0.5;
 }
 
-.apple-button-primary {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-black font-semibold tracking-tight transition-all duration-200 hover:bg-zinc-200 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none shadow-lg shadow-white/10;
+.artisan-button-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 text-black font-brand font-bold tracking-tight transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-amber-500/20 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
 }
 
-.apple-button-secondary {
-  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#17171b] border border-[#27272a] text-white font-medium tracking-tight transition-all duration-200 hover:bg-[#202025] hover:border-zinc-600 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+.artisan-button-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#1a1c2e] border border-[#232538] text-slate-200 font-medium tracking-tight transition-all duration-200 hover:bg-[#22253d] hover:border-amber-500/40 hover:text-white active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
 }
 
-.apple-input {
-  @apply w-full px-4 py-3 bg-[#0a0a0d] border border-[#27272a] rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-white/40 focus:ring-1 focus:ring-white/20 transition-all duration-200;
+.artisan-input {
+  @apply w-full px-4 py-3 bg-[#0d0e17] border border-[#232538] rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-amber-500/60 focus:ring-1 focus:ring-amber-500/30 transition-all duration-200;
 }
+
+.badge-gradient {
+  @apply bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-rose-500/10 border border-amber-500/30 text-amber-300;
+}
+
+/* Backward compatibility aliases */
+.apple-button-primary { @apply artisan-button-primary; }
+.apple-button-secondary { @apply artisan-button-secondary; }
+.apple-input { @apply artisan-input; }
+

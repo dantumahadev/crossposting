@@ -60,7 +60,7 @@ export default function CreatePostPage() {
         master_caption: masterCaption,
         platforms: selectedPlatforms,
         brand_tone: 'Professional',
-        default_hashtags: '#FounderLabs #Innovation #Tech #Growth'
+        default_hashtags: '#Artisanly #Innovation #Tech #Growth'
       });
       
       const newCaptions = { ...platformCaptions };
@@ -119,7 +119,7 @@ export default function CreatePostPage() {
     try {
       // 1. Create Draft
       const draft = await postsService.createDraft({
-        title: platformCaptions['youtube']?.title || masterCaption.split('\n')[0].slice(0, 50) || 'FounderLabs Post',
+        title: platformCaptions['youtube']?.title || masterCaption.split('\n')[0].slice(0, 50) || 'Artisanly Post',
         master_caption: masterCaption,
         media_asset_id: mediaAsset ? mediaAsset.id : null,
         scheduled_at: isScheduled && scheduleDate ? new Date(scheduleDate).toISOString() : null,

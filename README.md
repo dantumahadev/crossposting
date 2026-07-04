@@ -1,6 +1,6 @@
-# FounderLabs Social Posting Automation Tool (Real APIs)
+# Artisanly Cross-Posting Studio (100% Real APIs)
 
-A clean, premium, black-and-white Apple-style web application built for creators and businesses to upload media once, customize captions per platform, and publish immediately or schedule posts across **Instagram**, **Facebook**, **LinkedIn**, and **YouTube** using **100% real official APIs and OAuth flows**.
+A production-ready, full-stack web application designed for multi-network social media publishing across Meta (Facebook & Instagram), LinkedIn, and YouTube. Built with a premium **Artisan** glassmorphic theme and zero mock fallbacks.
 
 ## Features
 - **Upload Once, Publish Everywhere**: Support for images and videos with automatic metadata analysis.

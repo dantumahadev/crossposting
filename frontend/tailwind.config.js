@@ -8,31 +8,41 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        display: ['Outfit', 'Inter', 'sans-serif'],
+        display: ['Outfit', 'Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        brand: ['Plus Jakarta Sans', 'Outfit', 'sans-serif'],
       },
       colors: {
-        apple: {
-          black: "#050507",
-          card: "#0d0d10",
-          border: "#1f1f23",
-          hover: "#17171b",
-          subtle: "#a1a1aa",
-          light: "#f4f4f5"
+        artisan: {
+          bg: "#0a0b10",
+          card: "#13141f",
+          border: "#232538",
+          hover: "#1a1c2e",
+          amber: "#f59e0b",
+          copper: "#d97706",
+          rose: "#f43f5e",
+          violet: "#8b5cf6",
+          emerald: "#10b981",
+          light: "#f8fafc"
         }
       },
       animation: {
-        'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'fade-in': 'fadeIn 0.3s ease-out forwards',
-        'slide-up': 'slideUp 0.3s ease-out forwards',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-in': 'fadeIn 0.35s ease-out forwards',
+        'slide-up': 'slideUp 0.35s ease-out forwards',
+        'glow': 'glow 3s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          '0%': { opacity: '0', transform: 'scale(0.99)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
         },
         slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '0%': { transform: 'translateY(12px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 15px -3px rgba(245, 158, 11, 0.15)' },
+          '100%': { boxShadow: '0 0 25px 2px rgba(244, 63, 94, 0.25)' },
         }
       }
     },

@@ -117,7 +117,7 @@ export default function SettingsPage() {
             <div class="space-y-2">
               <label class="text-xs font-mono text-zinc-400 uppercase">Active Database Engine</label>
               <div class="p-3.5 rounded-xl bg-[#0a0a0e] border border-zinc-800 font-mono text-xs text-white flex items-center justify-between">
-                <span>sqlite:///./founderlabs.db</span>
+                <span>sqlite:///./artisanly.db</span>
                 <span class="text-[10px] bg-blue-950 px-2 py-0.5 rounded border border-blue-800 text-blue-300 font-bold">SQLModel / SQLite</span>
               </div>
             </div>

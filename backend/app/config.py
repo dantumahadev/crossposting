@@ -7,12 +7,12 @@ class Settings(BaseSettings):
     APP_BASE_URL: str = "http://localhost:5173"
     API_BASE_URL: str = "http://localhost:8000"
     ENCRYPTION_KEY: str = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-    JWT_SECRET_KEY: str = "supersecretjwtkeyforfounderlabsmvp2026"
+    JWT_SECRET_KEY: str = "supersecretjwtkeyforartisanlymvp2026"
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
 
     # Database & Queue
-    DATABASE_URL: str = "sqlite:///./founderlabs.db"
+    DATABASE_URL: str = "sqlite:///./artisanly.db"
     REDIS_URL: str = "redis://localhost:6379/0"
 
     # Storage
