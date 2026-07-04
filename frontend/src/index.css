@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#050507] text-[#f4f4f5] overflow-x-hidden;
+  }
+}
+
+/* Custom glassmorphism and Apple-style scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+.glass-panel {
+  @apply bg-[#0d0d10]/90 backdrop-blur-xl border border-[#1f1f23] rounded-2xl shadow-2xl;
+}
+
+.glass-panel-hover {
+  @apply transition-all duration-300 hover:border-white/20 hover:bg-[#17171b]/90 hover:shadow-white/5;
+}
+
+.apple-button-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white text-black font-semibold tracking-tight transition-all duration-200 hover:bg-zinc-200 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none shadow-lg shadow-white/10;
+}
+
+.apple-button-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#17171b] border border-[#27272a] text-white font-medium tracking-tight transition-all duration-200 hover:bg-[#202025] hover:border-zinc-600 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.apple-input {
+  @apply w-full px-4 py-3 bg-[#0a0a0d] border border-[#27272a] rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-white/40 focus:ring-1 focus:ring-white/20 transition-all duration-200;
+}
